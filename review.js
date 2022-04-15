@@ -374,7 +374,7 @@ const numbersToAddUp = [99, 5677, 232, 84, 2, 231]
 
 // Create a variable and assign a value of a copied array using the spread operator
 const tom = [...monalissaIsMessy]
-console.log(tom)
+// console.log(tom)
 // Create two arrays with any elements and connect both of them using the spread operator. Save the connected arrays into a new variable.
 const sawyer = [...exoticFruits, 'Harry is hungy']
 const forFun = [ 46, 101, 24, 7]
@@ -502,28 +502,42 @@ function sayHello(){
 }
 // sayHello()()
 
-
 // Create a function expression with your first name as the variable and then print your first and last name
 
-const name = function(firstName){
-    console
+const myName = function(firstName){
+    console.log(firstName, 'Chen')
 }
-  
 
+// myName('Kevin')
 
 // Create an arrow function that accepts a number and have it return that number doubled
 
+para1 = (x) => x * 2
+
+// console.log(para1(5))
 // =================================================
 //                     OBJECTS
 // =================================================
 
-// Create an object and call it human. Add a name, age, and location property. Give the properties values.
-
+/// Create an object and call it human. Add a name, age, and location property. Give the properties values.
+const human = {
+  name: 'James Jr.',
+  age: 56 ,
+  location: 'Mars',
+}
 // Access the name using dot notation
+
+console.log(human.name)
 
 // Access the age using square brackets
 
+console.log(human['age'])
+
 // Use object destructuring to access location
+
+// const {name, age, location} = human
+// console.log(location)
+
 
 // ACCESS Granted
 const bulbasaur = {
@@ -541,19 +555,38 @@ const bulbasaur = {
     console.log('Bulbahhhh!!!!!')
   }
 }
-
 // Print overgrow
 
+// console.log(bulbasaur.abilities[0].ability)
+// // OR
+// console.log(bulbasaur['abilities'][0]['ability'])
+
 // Print cut
+// console.log(bulbasaur.moves[2])
 
 // Print Bulbahhhh!!!!!
+// const {name, abilities, moves, sound} = bulbasaur
+// OR
+// bulbasaur.sound()
 
 // Add a height of 7 to bulbasaur using the dot notation. (Don't change bulbasaur object manually)
 
+// bulbasaur.height = 7;
+// console.log(bulbasaur)
+
 // Add a property called order and assign it a value of 1 using the square brackets. (Don't change bulbasaur object manually)
 
-// Print an array that contains every single properties in bulbasaur
+// bulbasaur['order'] = 1
+// console.log(bulbasaur)
 
-// Print every single properties one by one in the console
+// Print an array that contains every single property in bulbasaur
 
-// Print an array that contains every single values in bulbasaur
+// console.log(Object.keys(bulbasaur))
+
+// Print every single property one by one in the console
+for(const s in bulbasaur){
+  console.log(s)
+}
+
+// Print an array that contains every single value in bulbasaur
+console.log(Object.values(bulbasaur))
